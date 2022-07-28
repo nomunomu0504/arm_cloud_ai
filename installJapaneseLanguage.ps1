@@ -41,3 +41,5 @@ Set-TimeZone -Id "Tokyo Standard Time"
 #サーバーを再起動します。
 Write-Output "サーバーを再起動しています...`n"
 Restart-Computer
+
+Exit 0
