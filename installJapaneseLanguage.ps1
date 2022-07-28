@@ -1,43 +1,43 @@
-# Windows Server 2019‚ÌlanguagePack‚ğuC:\lang.isov‚Æ‚µ‚Äƒ_ƒEƒ“ƒ[ƒh‚µ‚Ü‚·B
-Write-Output "“ú–{ŒêƒpƒbƒN‚ğƒ_ƒEƒ“ƒ[ƒh‚µ‚Ä‚¢‚Ü‚·...`n"
+# Windows Server 2019ã®languagePackã‚’ã€ŒC:\lang.isoã€ã¨ã—ã¦ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã—ã¾ã™ã€‚
+Write-Output "æ—¥æœ¬èªãƒ‘ãƒƒã‚¯ã‚’ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã—ã¦ã„ã¾ã™...`n"
 Invoke-WebRequest -Uri http://download.windowsupdate.com/d/msdownload/update/software/updt/2018/04/lp_bac048dbf02b9166cfc0fd1a926c241e64955d6f.cab -OutFile C:\Users\cloudaiuser\Downloads\ja_jp.cab
 
-#uLpksetup.exevƒRƒ}ƒ“ƒh‚ğg‚Á‚Ä“ú–{ŒêlanguagePack‚ğƒCƒ“ƒXƒg[ƒ‹‚µ‚Ü‚·B
-Write-Output "“ú–{ŒêƒpƒbƒN‚ğ“K—p‚µ‚Ä‚¢‚Ü‚·...`n"
+#ã€ŒLpksetup.exeã€ã‚³ãƒãƒ³ãƒ‰ã‚’ä½¿ã£ã¦æ—¥æœ¬èªlanguagePackã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ã¾ã™ã€‚
+Write-Output "æ—¥æœ¬èªãƒ‘ãƒƒã‚¯ã‚’é©ç”¨ã—ã¦ã„ã¾ã™...`n"
 C:\windows\system32\Lpksetup.exe /i ja-JP /f /s /p $lppath
 
-#ƒ†[ƒU[‚ªg—p‚·‚éŒ¾Œê‚ğ“ú–{Œê‚É‚µ‚Ü‚·B
-Write-Output "ƒ†[ƒU[‚ÌŒ¾Œê‚ğ“ú–{Œê‚É‚µ‚Ä‚¢‚Ü‚·...`n"
+#ãƒ¦ãƒ¼ã‚¶ãƒ¼ãŒä½¿ç”¨ã™ã‚‹è¨€èªã‚’æ—¥æœ¬èªã«ã—ã¾ã™ã€‚
+Write-Output "ãƒ¦ãƒ¼ã‚¶ãƒ¼ã®è¨€èªã‚’æ—¥æœ¬èªã«ã—ã¦ã„ã¾ã™...`n"
 Set-WinUserLanguageList -LanguageList ja-JP,en-US -Force
 
-#“ü—Í‚·‚éŒ¾Œê‚ğ“ú–{Œê‚Åã‘‚«‚µ‚Ü‚·B
-Write-Output "“ü—Í‚·‚éŒ¾Œê‚ğ“ú–{Œê‚É‚µ‚Ä‚¢‚Ü‚·...`n"
+#å…¥åŠ›ã™ã‚‹è¨€èªã‚’æ—¥æœ¬èªã§ä¸Šæ›¸ãã—ã¾ã™ã€‚
+Write-Output "å…¥åŠ›ã™ã‚‹è¨€èªã‚’æ—¥æœ¬èªã«ã—ã¦ã„ã¾ã™...`n"
 Set-WinDefaultInputMethodOverride -InputTip "0411:00000411"
 
-#MS-IME‚Ì“ü—Í•û®‚ğİ’è‚µ‚Ü‚·B
-Write-Output "MS-IME‚Ì“ü—Í•û®‚ğİ’è‚µ‚Ä‚¢‚Ü‚·...`n"
+#MS-IMEã®å…¥åŠ›æ–¹å¼ã‚’è¨­å®šã—ã¾ã™ã€‚
+Write-Output "MS-IMEã®å…¥åŠ›æ–¹å¼ã‚’è¨­å®šã—ã¦ã„ã¾ã™...`n"
 Set-WinLanguageBarOption -UseLegacySwitchMode -UseLegacyLanguageBar
 
-#UI‚ÌŒ¾Œê‚ğ“ú–{Œê‚Åã‘‚«‚µ‚Ü‚·B
-Write-Output "UI‚ÌŒ¾Œê‚ğ“ú–{Œê‚É‚µ‚Ä‚¢‚Ü‚·...`n"
+#UIã®è¨€èªã‚’æ—¥æœ¬èªã§ä¸Šæ›¸ãã—ã¾ã™ã€‚
+Write-Output "UIã®è¨€èªã‚’æ—¥æœ¬èªã«ã—ã¦ã„ã¾ã™...`n"
 Set-WinUILanguageOverride -Language ja-JP
 
-#/“ú•t‚ÌŒ`®‚ğWindows‚ÌŒ¾Œê‚Æ“¯‚¶‚É‚µ‚Ü‚·B
-Write-Output "/“ú•t‚ÌŒ`®‚ğWindows‚ÌŒ¾Œê‚Æ“¯‚¶‚É‚µ‚Ä‚¢‚Ü‚·...`n"
+#æ™‚åˆ»/æ—¥ä»˜ã®å½¢å¼ã‚’Windowsã®è¨€èªã¨åŒã˜ã«ã—ã¾ã™ã€‚
+Write-Output "æ™‚åˆ»/æ—¥ä»˜ã®å½¢å¼ã‚’Windowsã®è¨€èªã¨åŒã˜ã«ã—ã¦ã„ã¾ã™...`n"
 Set-WinCultureFromLanguageListOptOut -OptOut $False
 
-#ƒƒP[ƒVƒ‡ƒ“‚ğ“ú–{‚É‚µ‚Ü‚·B
-Write-Output "ƒƒP[ƒVƒ‡ƒ“‚ğ“ú–{‚É‚µ‚Ä‚¢‚Ü‚·...`n"
+#ãƒ­ã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚’æ—¥æœ¬ã«ã—ã¾ã™ã€‚
+Write-Output "ãƒ­ã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚’æ—¥æœ¬ã«ã—ã¦ã„ã¾ã™...`n"
 Set-WinHomeLocation -GeoId 0x7A
 
-#ƒVƒXƒeƒ€ƒƒP[ƒ‹‚ğ“ú–{‚É‚µ‚Ü‚·B
-Write-Output "ƒVƒXƒeƒ€ƒƒP[ƒ‹‚ğ“ú–{‚É‚µ‚Ä‚¢‚Ü‚·...`n"
+#ã‚·ã‚¹ãƒ†ãƒ ãƒ­ã‚±ãƒ¼ãƒ«ã‚’æ—¥æœ¬ã«ã—ã¾ã™ã€‚
+Write-Output "ã‚·ã‚¹ãƒ†ãƒ ãƒ­ã‚±ãƒ¼ãƒ«ã‚’æ—¥æœ¬ã«ã—ã¦ã„ã¾ã™...`n"
 Set-WinSystemLocale -SystemLocale ja-JP
 
-#ƒ^ƒCƒ€ƒ][ƒ“‚ğ“Œ‹‚É‚µ‚Ü‚·B
-Write-Output "ƒ^ƒCƒ€ƒ][ƒ“‚ğ“Œ‹‚É‚µ‚Ä‚¢‚Ü‚·...`n"
+#ã‚¿ã‚¤ãƒ ã‚¾ãƒ¼ãƒ³ã‚’æ±äº¬ã«ã—ã¾ã™ã€‚
+Write-Output "ã‚¿ã‚¤ãƒ ã‚¾ãƒ¼ãƒ³ã‚’æ±äº¬ã«ã—ã¦ã„ã¾ã™...`n"
 Set-TimeZone -Id "Tokyo Standard Time"
 
-#ƒT[ƒo[‚ğÄ‹N“®‚µ‚Ü‚·B
-Write-Output "ƒT[ƒo[‚ğÄ‹N“®‚µ‚Ä‚¢‚Ü‚·...`n"
+#ã‚µãƒ¼ãƒãƒ¼ã‚’å†èµ·å‹•ã—ã¾ã™ã€‚
+Write-Output "ã‚µãƒ¼ãƒãƒ¼ã‚’å†èµ·å‹•ã—ã¦ã„ã¾ã™...`n"
 Restart-Computer
